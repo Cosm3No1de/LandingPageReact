@@ -17,8 +17,17 @@ function Main() {
 
             {/* Contenido principal */}
             <main role="main" className="inner cover">
-                <h1 className="cover-heading">Bienvenido a Mi Página</h1>
+                <h1 className="cover-heading">Cosm3no1de.dev</h1>
                 <p className="lead">Cosm3no1de!</p>
+
+                {/* Cuadrado de reproducción de video */}
+                <div className="video-container">
+                    <div className="video-player">
+                        <div className="play-button">
+                            <span>&#9658;</span> {/* Icono de reproducción (triángulo) */}
+                        </div>
+                    </div>
+                </div>
 
                 {/* Contenedor de botones apilados */}
                 <div className="button-container">

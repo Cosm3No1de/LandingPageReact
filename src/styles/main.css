@@ -7,17 +7,21 @@
     align-items: center; /* Centrar contenido horizontalmente */
     justify-content: flex-start; /* Alinear al inicio del contenedor */
     min-height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
-    background-color: #f4f4f4; /* Color de fondo claro */
+    background-color: #ecf0f1; /* Color de fondo claro */
 }
 
 /* Estilo del navbar */
 .navbar {
     width: 100%; /* Ancho completo */
-    background-color: #343a40; /* Color de fondo del navbar */
+    background-color: #34495e; /* Color más oscuro para el navbar */
     padding: 15px 0; /* Espaciado superior e inferior */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    position: sticky; /* Fijar el navbar en la parte superior al hacer scroll */
+    top: 0; /* Asegura que se mantenga en la parte superior */
+    z-index: 1000; /* Asegura que el navbar esté por encima de otros elementos */
 }
 
+/* Estilo para la lista del navbar */
 .navbar-list {
     list-style-type: none; /* Sin viñetas */
     display: flex; /* Usar flexbox para alinear horizontalmente */
@@ -26,19 +30,23 @@
     padding: 0; /* Sin padding */
 }
 
+/* Estilo para los elementos de la lista del navbar */
 .navbar-list li {
     margin: 0 20px; /* Espaciado entre elementos del navbar */
 }
 
+/* Estilo para los enlaces del navbar */
 .navbar-list a {
-    color: white; /* Color del texto del enlace */
+    color: #ecf0f1; /* Color claro para el texto del enlace */
     text-decoration: none; /* Sin subrayado */
-    font-weight: bold; /* Negrita */
-    transition: color 0.3s ease; /* Transición suave para el color al pasar el mouse */
+    font-weight: bold; /* Negrita para mayor énfasis */
+    transition: color 0.3s ease, transform 0.3s ease; /* Transición suave para el color y el tamaño al pasar el mouse */
 }
 
+/* Efecto hover en los enlaces del navbar */
 .navbar-list a:hover {
     color: #f39c12; /* Cambiar color al pasar el mouse */
+    transform: scale(1.1); /* Efecto de aumento al pasar el mouse sobre los enlaces */
 }
 
 /* Estilo interno para el contenido principal */
@@ -54,43 +62,178 @@
     padding: 40px 30px;
     background-color: #ffffff;
     border-radius: 12px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); /* Sombra más suave y pronunciada */
+}
+
+/* Estilo para los encabezados dentro del contenido principal */
+.cover-heading {
+    font-size: 3rem; /* Tamaño de fuente grande para el encabezado principal */
+    color: #2c3e50; /* Color oscuro y moderno */
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+
+/* Estilo para los párrafos dentro del contenido principal */
+.lead {
+    font-size: 1.5rem; /* Tamaño de fuente más grande para el texto descriptivo */
+    color: #7f8c8d; /* Color gris claro para mejor legibilidad */
+    line-height: 1.6; /* Mayor interlineado para mejorar la legibilidad */
+}
+
+/* Estilo para el cuadrado de reproducción de video */
+.video-container {
+    width: 100%; 
+    max-width: 400px; 
+    margin: 20px auto; 
+}
+
+.video-player {
+    width: 100%; 
+    height: 200px; 
+    background-color: #000; 
+    border-radius: 12px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.play-button {
+   font-size: 3rem; 
+   color: white; 
+   cursor: pointer;
+   transition: transform 0.3s ease;
+}
+
+.play-button:hover {
+   transform: scale(1.1); /* Efecto de aumento al pasar el mouse sobre el botón de reproducción */
 }
 
 /* Estilos para los botones apilados */
 
 .button-container {
-    display: flex;
-    flex-direction: column; 
-    width: 100%; /* Hacer que el contenedor de botones ocupe todo el ancho disponible */
+   display: flex;
+   flex-direction: column;
+   align-items: stretch; 
+   width: 100%; 
 }
 
 .btn {
-    background-color: #3498db;
-    color: white;
-    border-radius: 5px;
-    padding: 15px;
-    font-size: 1.1rem;
-    border: none;
-    cursor: pointer;
-    margin-bottom: 15px; /* Espaciado entre botones apilados */
-    
-    width: calc(100% - 30px); /* Hacer que los botones ocupen casi todo el ancho (con un margen) */
+   background-color: #3498db;
+   color: white;
+   border-radius: 5px;
+   padding: 15px;
+   font-size: 1.1rem;
+   border: none;
+   cursor: pointer;
+   margin-bottom: 15px;
+
+   width: calc(100% - 30px); 
+   
+   transition: background-color 0.3s ease, transform 0.2s ease; 
 }
 
 .btn:hover {
-    background-color: #2980b9;
+   background-color: #2980b9;
+   transform: scale(1.05); /* Efecto de aumento al pasar el mouse sobre los botones */
 }
 
-/* Estilos adicionales para mejorar la apariencia visual */
+/* Estilo para el pie de página */
+.mastfoot {
+   background-color: #34495e; 
+   color: white; 
+   padding: 10px 0; 
+   text-align: center; 
+}
+
+/* Animaciones suaves al cargar elementos */
+
+@keyframes fadeIn {
+   from {
+       opacity: 0;
+       transform: translateY(-20px); 
+   }
+   to {
+       opacity: 1;
+       transform: translateY(0); 
+   }
+}
+
+.inner,
+.video-player,
+.btn {
+   animation-name: fadeIn;
+   animation-duration: 0.6s;
+   animation-fill-mode: forwards;
+}
+
+/* Estilos responsivos */
 
 @media (max-width: 768px) {
    .navbar-list li {
-       margin: 0 10px; /* Menor espaciado en pantallas pequeñas */
+       margin-right :10px ; 
+       margin-left :10px ; 
    }
 
    .btn {
-       font-size: 1rem; /* Tamaño de fuente más pequeño en pantallas pequeñas */
-       padding: 12px; /* Menor padding en botones para pantallas pequeñas */
-   }
+       font-size :1rem ; 
+       padding :12px ; 
+       margin-bottom :10px ;  
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     }
 }
+   

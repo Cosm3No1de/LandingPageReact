@@ -1,31 +1,45 @@
 /* src/styles/header.css */
 
-/* Estilo general para el header */
+/* Estilo general para la cabecera */
 .masthead {
-    background-color: #343a40; /* Color de fondo oscuro */
-    color: white; /* Color del texto */
+    background-color: #2c3e50; /* Color oscuro para el fondo */
+    color: white; /* Color del texto en blanco */
     padding: 20px 0; /* Espaciado superior e inferior */
-    position: relative; /* Posicionamiento relativo para el efecto de fondo */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Sombra sutil */
+    text-align: center; /* Centrar texto en la cabecera */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra sutil para profundidad */
+    transition: background-color 0.3s ease; /* Transición suave para el fondo al pasar el mouse */
 }
 
+.masthead:hover {
+    background-color: #34495e; /* Cambiar color al pasar el mouse */
+}
+
+/* Estilo interno para el contenido de la cabecera */
 .inner {
     max-width: 1200px; /* Ancho máximo del contenido */
-    margin: auto; /* Centrar contenido */
+    margin: auto; /* Centrar contenido horizontalmente */
     padding: 0 20px; /* Espaciado lateral */
-    display: flex; /* Usar Flexbox para alinear elementos */
-    justify-content: space-between; /* Espaciado entre elementos */
-    align-items: center; /* Centrar verticalmente los elementos */
+}
+
+/* Estilo para el título de la cabecera */
+.masthead-brand {
+    font-size: 2.5rem; /* Tamaño de fuente más grande para el título */
+    font-weight: bold; /* Negrita para mayor énfasis */
+    letter-spacing: 2px; /* Espaciado entre letras para un efecto moderno */
+}
+
+/* Efecto de animación en el título al cargar la página */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px); /* Mover hacia arriba al inicio de la animación */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Regresar a su posición original al final de la animación */
+    }
 }
 
 .masthead-brand {
-    font-size: 2rem; /* Tamaño de fuente grande para el título */
-    font-weight: bold; /* Negrita */
-    text-transform: uppercase; /* Texto en mayúsculas */
-}
-
-/* Efecto de transición al pasar el mouse sobre el título */
-.masthead-brand:hover {
-    color: #f39c12; /* Cambiar color al pasar el mouse */
-    transition: color 0.3s ease; /* Transición suave para el cambio de color */
+    animation: fadeIn 1s ease forwards; /* Aplicar animación al cargar */
 }
