@@ -1,0 +1,118 @@
+/* src/styles/styles.css */
+
+/* Estilos generales */
+body {
+    background-color: #f8f9fa; /* Color de fondo claro */
+    font-family: 'Arial', sans-serif; /* Fuente legible */
+    margin: 0; /* Sin márgenes por defecto */
+    display: flex; /* Usar flexbox para centrar contenido */
+    flex-direction: column; /* Apilar elementos verticalmente */
+    min-height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
+}
+
+/* Estilo para la cabecera */
+.masthead {
+    background-color: #343a40; /* Color oscuro para el fondo */
+    color: white; /* Color del texto en blanco */
+    padding: 20px 0; /* Espaciado superior e inferior */
+    text-align: center; /* Centrar texto en la cabecera */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil para profundidad */
+}
+
+.masthead-brand {
+    font-size: 2.5rem; /* Tamaño de fuente más grande para el título */
+    font-weight: bold; /* Negrita para mayor énfasis */
+}
+
+/* Estilo para el cuerpo principal */
+/* Estilo para el contenido principal */
+.main-content {
+    flex: 1; /* Permitir que el contenido principal ocupe el espacio restante */
+    display: flex;
+    flex-direction: column; /* Apilar elementos verticalmente */
+    align-items: center; /* Centrar contenido horizontalmente */
+    justify-content: center; /* Centrar contenido verticalmente */
+    padding: 40px; /* Espaciado interno del contenido principal */
+    background-color: #ffffff; /* Fondo blanco para el contenido principal */
+    border-radius: 12px; /* Bordes redondeados para un aspecto más suave */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra suave para profundidad */
+    margin: 20px; /* Margen externo para separar del borde de la pantalla */
+}
+
+/* Estilo para los encabezados dentro del contenido principal */
+.main-content h1 {
+    font-size: 2.5rem; /* Tamaño de fuente grande para el encabezado */
+    color: #2c3e50; /* Color oscuro y moderno */
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+
+/* Estilo para los párrafos dentro del contenido principal */
+.main-content p {
+    font-size: 1.25rem; /* Tamaño de fuente mediano para el texto descriptivo */
+    color: #7f8c8d; /* Color gris claro para mejor legibilidad */
+    line-height: 1.6; /* Mayor interlineado para mejorar la legibilidad */
+    text-align: center; /* Centrar texto en párrafos */
+}
+
+/* Estilo adicional para botones dentro del contenido principal */
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* Hacer que los botones ocupen todo el ancho disponible */
+    width: 100%; /* Asegurar que el contenedor de botones ocupe todo el ancho */
+}
+
+.btn {
+    background-color: #3498db;
+    color: white;
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 1.1rem;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 15px; /* Espaciado entre botones apilados */
+    
+    width: calc(100% - 30px); /* Hacer que los botones ocupen casi todo el ancho (con un margen) */
+}
+
+.btn:hover {
+    background-color: #2980b9;
+
+}
+
+.cover-heading {
+    font-size: 3rem; /* Tamaño de fuente grande para el encabezado principal */
+    margin-bottom: 20px; /* Espaciado inferior */
+    color: #2c3e50; /* Color oscuro y moderno */
+}
+
+.lead {
+    font-size: 1.5rem; /* Tamaño de fuente más grande para el texto descriptivo */
+    color: #6c757d; /* Color gris claro para mejor legibilidad */
+    line-height: 1.6; /* Mayor interlineado para mejorar la legibilidad */
+}
+
+/* Estilo para el pie de página */
+.mastfoot {
+    background-color: #343a40; /* Color oscuro para el fondo del pie de página */
+    color: white; /* Color del texto en blanco */
+    padding: 10px 0; /* Espaciado superior e inferior */
+    text-align: center; /* Centrar texto en el pie de página */
+}
+
+/* Estilos responsivos */
+
+@media (max-width: 768px) {
+    .masthead-brand {
+        font-size: 1.8rem; /* Tamaño de fuente más pequeño en pantallas pequeñas */
+    }
+
+    .cover-heading {
+        font-size: 2.5rem; /* Tamaño de fuente más pequeño en pantallas pequeñas */
+    }
+
+    .lead {
+        font-size: 1.2rem; /* Tamaño de fuente más pequeño en pantallas pequeñas */
+    }
+}

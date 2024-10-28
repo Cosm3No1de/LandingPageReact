@@ -1,0 +1,31 @@
+/* src/styles/header.css */
+
+/* Estilo general para el header */
+.masthead {
+    background-color: #343a40; /* Color de fondo oscuro */
+    color: white; /* Color del texto */
+    padding: 20px 0; /* Espaciado superior e inferior */
+    position: relative; /* Posicionamiento relativo para el efecto de fondo */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Sombra sutil */
+}
+
+.inner {
+    max-width: 1200px; /* Ancho máximo del contenido */
+    margin: auto; /* Centrar contenido */
+    padding: 0 20px; /* Espaciado lateral */
+    display: flex; /* Usar Flexbox para alinear elementos */
+    justify-content: space-between; /* Espaciado entre elementos */
+    align-items: center; /* Centrar verticalmente los elementos */
+}
+
+.masthead-brand {
+    font-size: 2rem; /* Tamaño de fuente grande para el título */
+    font-weight: bold; /* Negrita */
+    text-transform: uppercase; /* Texto en mayúsculas */
+}
+
+/* Efecto de transición al pasar el mouse sobre el título */
+.masthead-brand:hover {
+    color: #f39c12; /* Cambiar color al pasar el mouse */
+    transition: color 0.3s ease; /* Transición suave para el cambio de color */
+}

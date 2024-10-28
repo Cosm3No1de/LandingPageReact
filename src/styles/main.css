@@ -1,0 +1,96 @@
+/* src/styles/main.css */
+
+/* Estilo general para el contenedor principal */
+.main-container {
+    display: flex;
+    flex-direction: column; /* Apilar elementos verticalmente */
+    align-items: center; /* Centrar contenido horizontalmente */
+    justify-content: flex-start; /* Alinear al inicio del contenedor */
+    min-height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
+    background-color: #f4f4f4; /* Color de fondo claro */
+}
+
+/* Estilo del navbar */
+.navbar {
+    width: 100%; /* Ancho completo */
+    background-color: #343a40; /* Color de fondo del navbar */
+    padding: 15px 0; /* Espaciado superior e inferior */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+}
+
+.navbar-list {
+    list-style-type: none; /* Sin viñetas */
+    display: flex; /* Usar flexbox para alinear horizontalmente */
+    justify-content: center; /* Centrar elementos horizontalmente */
+    margin: 0; /* Sin margen */
+    padding: 0; /* Sin padding */
+}
+
+.navbar-list li {
+    margin: 0 20px; /* Espaciado entre elementos del navbar */
+}
+
+.navbar-list a {
+    color: white; /* Color del texto del enlace */
+    text-decoration: none; /* Sin subrayado */
+    font-weight: bold; /* Negrita */
+    transition: color 0.3s ease; /* Transición suave para el color al pasar el mouse */
+}
+
+.navbar-list a:hover {
+    color: #f39c12; /* Cambiar color al pasar el mouse */
+}
+
+/* Estilo interno para el contenido principal */
+.inner {
+    max-width: 800px;
+    margin: auto;
+    padding: 40px;
+    text-align: center;
+}
+
+/* Estilo para la sección principal con botones centrados */
+.cover {
+    padding: 40px 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para los botones apilados */
+
+.button-container {
+    display: flex;
+    flex-direction: column; 
+    width: 100%; /* Hacer que el contenedor de botones ocupe todo el ancho disponible */
+}
+
+.btn {
+    background-color: #3498db;
+    color: white;
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 1.1rem;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 15px; /* Espaciado entre botones apilados */
+    
+    width: calc(100% - 30px); /* Hacer que los botones ocupen casi todo el ancho (con un margen) */
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+/* Estilos adicionales para mejorar la apariencia visual */
+
+@media (max-width: 768px) {
+   .navbar-list li {
+       margin: 0 10px; /* Menor espaciado en pantallas pequeñas */
+   }
+
+   .btn {
+       font-size: 1rem; /* Tamaño de fuente más pequeño en pantallas pequeñas */
+       padding: 12px; /* Menor padding en botones para pantallas pequeñas */
+   }
+}
